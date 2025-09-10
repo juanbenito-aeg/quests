@@ -1,0 +1,14 @@
+.completed-or-not-circle {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.completed {
+  background-color: green;
+}
+
+.uncompleted {
+  background-color: red;
+}
