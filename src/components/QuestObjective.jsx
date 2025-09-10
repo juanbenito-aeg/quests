@@ -4,12 +4,12 @@ function QuestObjective({ description, isCompleted }) {
   return (
     <li>
       {description}{" "}
-      <div
+      <span
         className={
           "completed-or-not-circle " +
           (isCompleted ? "completed" : "uncompleted")
         }
-      ></div>
+      ></span>
     </li>
   );
 }

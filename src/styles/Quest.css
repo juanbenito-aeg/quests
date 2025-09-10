@@ -1,8 +1,19 @@
-.questWrapper {
+.quest-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
   border-radius: 16px;
-  padding: 1em;
-  box-shadow: 0 0 10px 1px rgb(0 0 0 / 0.5);
+  padding: 0.5em 1.5em;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 15px 0.5px rgb(0 0 0 / 75%);
+}
+
+.quest-wrapper--inactive {
+  filter: opacity(50%);
+}
+
+.quest-wrapper__sections-separator {
+  width: 100px;
+  margin: 1em auto;
 }

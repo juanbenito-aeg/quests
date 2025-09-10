@@ -16,7 +16,7 @@ function Quests() {
   }, []);
 
   return (
-    <div className="questsBoard">
+    <div className="quests-board">
       {quests.map((questWrapper) => {
         const quest = questWrapper.quest;
 

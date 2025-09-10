@@ -1,3 +1,4 @@
+import "../styles/QuestRewards.css";
 import { useState } from "react";
 import QuestRewardItems from "./QuestRewardItems";
 import QuestRewardButton from "./QuestRewardButton";
@@ -26,15 +27,23 @@ function QuestRewards({ rewards }) {
     <>
       <h3>Rewards</h3>
 
-      {rewardNames.map((rewardName) => (
-        <QuestRewardButton
-          key={rewardName}
-          rewardName={rewardName}
-          onClick={() => {
-            setActiveReward(rewardName);
-          }}
-        />
-      ))}
+      <div className="quest-reward-buttons">
+        {rewardNames.map((rewardName) => (
+          <QuestRewardButton
+            key={rewardName}
+            rewardName={rewardName}
+            onClick={() => {
+              let newActiveReward;
+
+              if (activeReward !== rewardName) {
+                newActiveReward = rewardName;
+              }
+
+              setActiveReward(newActiveReward);
+            }}
+          />
+        ))}
+      </div>
 
       {activeRewardContent}
     </>
