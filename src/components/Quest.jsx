@@ -18,7 +18,9 @@ function Quest({
   location,
 }) {
   return (
-    <div className={`quest-wrapper ${!isActive && "quest-wrapper--inactive"}`}>
+    <div
+      className={`quest-wrapper ${isActive ? "quest-wrapper--inactive" : ""}`}
+    >
       <input
         className="quest-checkbox"
         type="checkbox"
