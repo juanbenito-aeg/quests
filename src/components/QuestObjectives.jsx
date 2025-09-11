@@ -1,6 +1,6 @@
 import QuestObjective from "./QuestObjective";
 
-function QuestObjectives({ isQuestActive, objectives }) {
+function QuestObjectives({ questId, objectives, onObjectiveStatusChange }) {
   return (
     <>
       <h3 className="quest-section-heading">Objectives</h3>
@@ -8,9 +8,11 @@ function QuestObjectives({ isQuestActive, objectives }) {
       {objectives.map((objective) => (
         <QuestObjective
           key={objective.id}
-          isQuestActive={isQuestActive}
+          questId={questId}
+          id={objective.id}
           description={objective.description}
           isCompleted={objective.completed}
+          onStatusChange={onObjectiveStatusChange}
         />
       ))}
     </>
