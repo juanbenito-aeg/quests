@@ -13,6 +13,10 @@
   src: url("/KochAltschrift.ttf");
 }
 
+:root {
+  font-size: 22px;
+}
+
 body {
   font-family: KochAltschrift;
 }

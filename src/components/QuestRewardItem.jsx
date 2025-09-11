@@ -1,22 +1,12 @@
 function QuestRewardItem({ item }) {
   return (
-    <>
+    <li>
       <p>
-        <strong>Name</strong>: {item.name}
+        {item.name}
+        {(item.isUnique && " (Unique)") ||
+          (item.quantity && ` (Qty.: ${item.quantity})`)}
       </p>
-
-      {item.isUnique && (
-        <p>
-          <strong>Unique</strong>
-        </p>
-      )}
-
-      {item.quantity && (
-        <p>
-          <strong>Quantity</strong>: {item.quantity}
-        </p>
-      )}
-    </>
+    </li>
   );
 }
 

@@ -2,11 +2,11 @@ import QuestRewardItem from "./QuestRewardItem";
 
 function QuestRewardItems({ items }) {
   return (
-    <div>
+    <ol>
       {items.map((item) => (
         <QuestRewardItem key={item.id} item={item} />
       ))}
-    </div>
+    </ol>
   );
 }
 

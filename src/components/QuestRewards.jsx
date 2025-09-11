@@ -25,7 +25,7 @@ function QuestRewards({ rewards }) {
 
   return (
     <>
-      <h3>Rewards</h3>
+      <h3 className="quest-section-heading">Rewards</h3>
 
       <div className="quest-reward-buttons">
         {rewardNames.map((rewardName) => (
@@ -45,7 +45,9 @@ function QuestRewards({ rewards }) {
         ))}
       </div>
 
-      {activeRewardContent}
+      <div className={activeReward && "quest-reward"}>
+        {activeRewardContent}
+      </div>
     </>
   );
 }

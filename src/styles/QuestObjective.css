@@ -1,14 +1,22 @@
-.completed-or-not-circle {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
+.quest-objective-label {
+  transition: text-shadow 0.5s;
 }
 
-.completed {
-  background-color: green;
+.quest-objective-label:hover {
+  text-shadow: 0 0 2px rgb(0 0 0 / 65%);
 }
 
-.uncompleted {
-  background-color: red;
+.quest-objective-checkbox {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 16px;
+  background-image: url("/quest-objective-uncompleted.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.quest-objective-checkbox:checked {
+  background-image: url("/quest-objective-completed.png");
 }

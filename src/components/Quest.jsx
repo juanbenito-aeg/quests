@@ -1,5 +1,6 @@
 import "../styles/Quest.css";
 import questSectionsSeparator from "/quest-sections-separator.png";
+import { useState } from "react";
 import QuestData from "./QuestData";
 import QuestRewards from "./QuestRewards";
 import QuestObjectives from "./QuestObjectives";
@@ -14,8 +15,23 @@ function Quest({
   objectives,
   location,
 }) {
+  const [isQuestActive, setIsQuestActive] = useState(isActive);
+
+  function handleChange(e) {
+    setIsQuestActive(e.target.checked);
+  }
+
   return (
-    <div className={`quest-wrapper ${!isActive && "quest-wrapper--inactive"}`}>
+    <div
+      className={`quest-wrapper ${!isQuestActive && "quest-wrapper--inactive"}`}
+    >
+      <input
+        className="quest-checkbox"
+        type="checkbox"
+        checked={isQuestActive}
+        onChange={handleChange}
+      />
+
       <h3>Min. Lvl.: {levelRequirement}</h3>
 
       <img
@@ -40,7 +56,7 @@ function Quest({
         className="quest-wrapper__sections-separator"
       />
 
-      <QuestObjectives objectives={objectives} />
+      <QuestObjectives isQuestActive={isQuestActive} objectives={objectives} />
 
       <img
         src={questSectionsSeparator}

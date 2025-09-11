@@ -1,19 +1,18 @@
 import QuestObjective from "./QuestObjective";
 
-function QuestObjectives({ objectives }) {
+function QuestObjectives({ isQuestActive, objectives }) {
   return (
     <>
-      <h3>Objectives</h3>
+      <h3 className="quest-section-heading">Objectives</h3>
 
-      <ul>
-        {objectives.map((objective) => (
-          <QuestObjective
-            key={objective.id}
-            description={objective.description}
-            isCompleted={objective.completed}
-          />
-        ))}
-      </ul>
+      {objectives.map((objective) => (
+        <QuestObjective
+          key={objective.id}
+          isQuestActive={isQuestActive}
+          description={objective.description}
+          isCompleted={objective.completed}
+        />
+      ))}
     </>
   );
 }

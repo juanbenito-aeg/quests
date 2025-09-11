@@ -1,6 +1,11 @@
 .quest-reward-button {
-  box-shadow: 0 0 5px 0.5px rgb(0 0 0 / 50%);
+  box-shadow: 0 5px 7.5px 0.5px rgb(0 0 0 / 50%);
   border-radius: 16px;
   padding: 0.5em;
   object-fit: contain;
+  transition: box-shadow 0.5s;
+}
+
+.quest-reward-button:hover {
+  box-shadow: 0 5px 12.5px 0.5px rgb(0 0 0 / 50%);
 }
